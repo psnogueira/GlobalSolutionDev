@@ -15,7 +15,7 @@ function generateRandomDate(initialDate, finalDate) {
 }
 
 function generateRandomTrip() {
-    const cities = ['São Paulo', 'Rio de Janeiro', 'Salvador', 'Brasília', 'Fortaleza', 'Belo Horizonte', 'Manaus', 'Curitiba', 'Porto Alegre', 'Recife'];
+    const cities = ['São Paulo', 'Rio de Janeiro', 'Salvador', 'Brasília', 'Belo Horizonte', 'Manaus', 'Recife'];
     const captains = ['Luiz', 'Carlos', 'Ana', 'Mariana', 'Pedro', 'João', 'Maria', 'José', 'Antônio', 'Francisco'];
     const date = generateRandomDate('2023-01-01', '2024-12-31'); // Datas entre 2023 e 2024
     const tripStatus = ['Em andamento', 'Concluida', 'Em espera', 'Cancelada'];

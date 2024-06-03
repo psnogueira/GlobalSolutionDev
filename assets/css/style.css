@@ -40,7 +40,7 @@ button.remove {
 }
 
 footer {
-    background: #202a35;
+    background: #212529;
 }
 
 .nav-bg {
@@ -77,7 +77,7 @@ footer {
 }
 
 .main-body {
-    min-height: 51vh;
+    min-height: 56vh;
 }
 
 .tableDiv{

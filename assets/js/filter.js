@@ -10,9 +10,9 @@ document.getElementById('searchInput').addEventListener('input', function(event)
 
     let searchText = event.target.value.toLowerCase();
     let filteredTrips = trips.filter(trip =>
+        trip.origin.toLowerCase().includes(searchText) ||
         trip.destination.toLowerCase().includes(searchText) ||
-        trip.date.includes(searchText) ||
-        trip.captain.toLowerCase().includes(searchText)
+        trip.date.includes(searchText)
     );
-    filteredTrips.forEach((trip, index) => addTrip(trip.destination, trip.date, trip.captain));
+    filteredTrips.forEach((trip, index) => addTrip(trip.code, trip.origin, trip.destination, trip.date, trip.captain, trip.cargo, trip.status));
 });
