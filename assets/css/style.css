@@ -13,3 +13,81 @@ table th, table td {
 button.remove {
     margin-right: 5px;
 }
+
+.badge-active{
+    background: #a1a0f559;
+    color: #373e83;
+}
+
+.badge-finished{
+    background: #99ec9663;
+    color: #165512;
+}
+
+.badge-waiting{
+    background: #ddc17391;
+    color: #74602b;
+}
+
+.badge-cancelled{
+    background: #db897091;
+    color: #692525;
+}
+
+.badge-unknown{
+    background: #949494;
+    color: #030303;
+}
+
+footer {
+    background: #202a35;
+}
+
+.nav-bg {
+    background: #212529;
+}
+
+.text-white {
+    color: #b8b8b8;
+}
+
+.tbl-container {
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.bg-light {
+    background-color: rgba(240, 240, 240, 0.753);
+    color: white;
+}
+
+.bdr {
+    border-radius: 20px;
+    overflow: visible;
+    border: 1px solid black;
+    outline-color: #030303;
+}
+
+.div-table {
+    display: table;
+    width: 100%;
+    min-height: 400px;
+    margin-bottom: 80px;
+}
+
+.main-body {
+    min-height: 51vh;
+}
+
+.tableDiv{
+    display: table-row;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.no-style {
+    text-decoration: none;
+}

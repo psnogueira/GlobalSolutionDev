@@ -18,15 +18,21 @@ function generateRandomTrip() {
     const cities = ['São Paulo', 'Rio de Janeiro', 'Salvador', 'Brasília', 'Fortaleza', 'Belo Horizonte', 'Manaus', 'Curitiba', 'Porto Alegre', 'Recife'];
     const captains = ['Luiz', 'Carlos', 'Ana', 'Mariana', 'Pedro', 'João', 'Maria', 'José', 'Antônio', 'Francisco'];
     const date = generateRandomDate('2023-01-01', '2024-12-31'); // Datas entre 2023 e 2024
+    const tripStatus = ['Em andamento', 'Concluida', 'Em espera', 'Cancelada'];
 
     const maxArrivalDate = new Date(date);
     maxArrivalDate.setDate(maxArrivalDate.getDate() + 3);
     const arrivalDate = generateRandomDate(date, maxArrivalDate.toISOString().slice(0, 10));
 
+    const cargo = Math.floor(Math.random() * 100000) + 1; // Carga entre 1 e 1000 toneladas
+
     saveTripToLocalStorage(
         cities[Math.floor(Math.random() * cities.length)], 
+        cities[Math.floor(Math.random() * cities.length)], 
         date, 
-        captains[Math.floor(Math.random() * captains.length)]
+        captains[Math.floor(Math.random() * captains.length)],
+        cargo,
+        tripStatus[Math.floor(Math.random() * tripStatus.length)]
     );
 }
 
@@ -35,9 +41,14 @@ function getTripsFromLocalStorage() {
     return trips ? JSON.parse(trips) : [];
 }
 
-function saveTripToLocalStorage(destination, date, captain) {
+function saveTripToLocalStorage(origin, destination, date, captain, cargo, status) {
     const trips = getTripsFromLocalStorage();
-    trips.push({ destination, date, captain });
+    let code = generateId();
+
+    console.log(code);
+
+    // Add the new trip to the list of trips and save it to the local storage.
+    trips.push({ code, origin, destination, date, captain, cargo, status });
     localStorage.setItem('trips', JSON.stringify(trips));
     window.location = "index.html"
 }
